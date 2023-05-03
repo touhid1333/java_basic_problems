@@ -40,7 +40,7 @@ public class JavaLoopsTwo {
                 sum = sum + (int) Math.pow(2, j) * b;
             }
             int total = a + sum;
-            System.out.print(total+ "   ");
+            System.out.print(total+ " ");
         }
     }
 }
