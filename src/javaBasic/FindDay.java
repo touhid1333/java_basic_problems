@@ -1,13 +1,22 @@
 package javaBasic;
 
 import java.io.*;
-import java.text.DateFormat;
-import java.util.Date;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.time.LocalDate;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
 
 public class FindDay {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("abcd"));
 
         String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
@@ -18,6 +27,7 @@ public class FindDay {
         int year = Integer.parseInt(firstMultipleInput[2]);
 
         String res = Result.findDay(month, day, year);
+        System.out.println(res);
 
         bufferedWriter.write(res);
         bufferedWriter.newLine();
@@ -41,7 +51,9 @@ class Result {
      */
 
     public static String findDay(int month, int day, int year) {
-        return "";
+        LocalDate localDate = LocalDate.of(year, month, day);
+        String dayOfWeek = String.valueOf(localDate.getDayOfWeek());
+        return dayOfWeek;
     }
 
 }
