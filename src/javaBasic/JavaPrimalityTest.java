@@ -9,20 +9,20 @@ import java.util.Scanner;
 public class JavaPrimalityTest {
     public static void main(String[] args) throws IOException {
         Scanner s = new Scanner(System.in);
-//        BigInteger n = s.nextBigInteger();
-//        if (isPrimeNumber(n)) {
-//            System.out.println("prime");
-//        } else {
-//            System.out.println("not prime");
-//        }
-
         BigInteger n = s.nextBigInteger();
-        s.close();
-        if (n.isProbablePrime(50)) {
+        if (isPrimeNumber(n)) {
             System.out.println("prime");
         } else {
             System.out.println("not prime");
         }
+
+//        BigInteger n = s.nextBigInteger();
+//        s.close();
+//        if (n.isProbablePrime(50)) {
+//            System.out.println("prime");
+//        } else {
+//            System.out.println("not prime");
+//        }
         s.close();
     }
 
