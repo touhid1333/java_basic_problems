@@ -14,7 +14,7 @@ public class Anagrams {
         String word2 = scanner.nextLine();
         scanner.close();
 
-
+        
     }
 
 
